@@ -1,0 +1,100 @@
+.footer {
+  padding: 20px 0;
+  background: rgba(0,0,0,.5);
+}
+.container-footer {
+  align-items: center;
+}
+.social-buttons:hover {
+  z-index: 3;
+}
+.social-buttons a {
+  display: inline-flex;
+  text-decoration: none;
+  font-size: 18px;
+  width: 60px;
+  height: 60px;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+  margin: 0 8px;
+}
+.social-buttons a:before {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(45deg, #22a6b3, #30336b);
+  border-radius: 50%;
+  z-index: -1;
+  transition: 0.3s ease-in;
+}
+.social-buttons a:hover::before {
+  transform: scale(0);
+}
+.social-buttons a i {
+  transition: 0.3s ease-in;
+}
+.social-buttons a svg {
+  transition: .3s linear;
+}
+.social-buttons a:hover i, .social-buttons a:hover svg {
+  background: linear-gradient(45deg, #22a6b3, #30336b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(2.2);
+}
+@media (max-width: 930px) {
+  footer {
+    .social-buttons a {
+      width: 45px;
+      height: 45px;
+    }
+    .social-buttons a:before {
+      width: 45px;
+      height: 45px;
+    }
+  }
+}
+@media (max-width: 850px) {
+  footer {
+    .social-buttons a {
+      font-size: 14px;
+      width: 30px;
+      height: 30px;
+    }
+    .social-buttons a:before {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .container-footer {
+    flex-direction: column-reverse;
+  }
+  .social-buttons {
+    margin-bottom: 10px;
+  }
+  footer {
+    .social-buttons a {
+      font-size: 16px;
+      width: 40px;
+      height: 40px;
+    }
+    .social-buttons a:before {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+@media (max-width: 500px) {
+  footer {
+    img {
+      margin: 20px 0;
+    }
+  }
+
+}

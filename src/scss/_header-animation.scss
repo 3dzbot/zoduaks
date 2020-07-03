@@ -1,0 +1,121 @@
+.header {
+  .neon, h4 {
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  .neon {
+    font-family: 'Dancing Script', Arial, sans-serif;
+    font-weight: bold;
+    position: relative;
+    margin: 20px 0;
+    padding: 0 20px;
+    font-size: 3em;
+    color: #fff;
+    text-shadow: 0 0 20px #3ae374;
+    letter-spacing: 10px;
+  }
+  .neon:after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 20px;
+    z-index: -1;
+    color: #3ae374;
+    filter: blur(15px);
+  }
+  .neon:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #32ff7e;
+    z-index: -2;
+    opacity: .2;
+    filter: blur(40px);
+  }
+  .header-contact {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    font-weight: bold;
+    color: #111;
+    font-size: 2em;
+  }
+  .header-contact span {
+    display: table-cell;
+    margin: 0;
+    padding: 0;
+    animation: animate-btn 1s linear infinite;
+  }
+
+  @keyframes animate-btn {
+    0%, 100% {
+      color: #fff;
+      filter: blur(2px);
+      text-shadow: 0 0 10px #00b3ff,
+      0 0 20px #00b3ff,
+      0 0 40px #00b3ff,
+      0 0 80px #00b3ff,
+      0 0 120px #00b3ff,
+      0 0 200px #00b3ff,
+      0 0 300px #00b3ff;
+    }
+    8%, 92% {
+      color: #111;
+      filter: blur(0px);
+      text-shadow: none;
+    }
+  }
+  .header-contact span:nth-child(1){
+    animation-delay: 0s;
+  }
+  .header-contact span:nth-child(2){
+    animation-delay: 0.1s;
+  }
+  .header-contact span:nth-child(3){
+    animation-delay: 0.2s;
+  }
+  .header-contact span:nth-child(4){
+    animation-delay: 0.3s;
+  }
+  .header-contact span:nth-child(5){
+    animation-delay: 0.4s;
+  }
+  .header-contact span:nth-child(6){
+    animation-delay: .5s;
+  }
+  .header-contact span:nth-child(7){
+    animation-delay: .6s;
+  }
+  .header-contact span:nth-child(8){
+    animation-delay: .7s;
+  }
+  .header-contact span:nth-child(9){
+    animation-delay: .8s;
+  }
+  .header-contact span:nth-child(10){
+    animation-delay: .9s;
+  }
+}
+@media (max-width: 500px) {
+  .header__hello {
+    display: none;
+  }
+}
+@media (max-height: 450px) {
+  .header__hello {
+    display: none;
+  }
+}
+@media (max-height: 350px) {
+  .header {
+    .neon {
+      margin: 10px 0;
+    }
+  }
+}

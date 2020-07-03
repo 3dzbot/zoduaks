@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css?family=Bad+Script|Dancing+Script|Quicksand&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #000;
+  font-family: sans-serif, Arial;
+}
+::selection {
+  background: rgba(0,0,0,.8);
+  color: #fff;
+}
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -99;
+}
+h1, h2, h3  {
+  margin: 0;
+  text-align: center;
+  padding: 20px 0;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+h2, h3 {
+  font-size: 36px;
+  color: #fff;
+}
+section {
+  padding: 20px 0;
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+@media (max-width: 1210px) {
+  .container {
+    width: 95%;
+  }
+}
+.container-flex {
+  display: flex;
+  justify-content: space-between;
+}
+.bar-long {
+  height: 3px;
+  background: #ccc;
+  width: 0;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.btn-top {
+  position: fixed;
+  bottom: 50px;
+  left: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #00b3ff;
+  display: none;
+  z-index: 100;
+  .fa-arrow-circle-up {
+    font-size: 40px;
+    transition: .4s;
+    border-radius: 50%;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+.flex-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  a {
+    color: #ffffff;
+    font-size: 24px;
+    &:hover {
+      color: #62b9ff;
+    }
+  }
+}
+//.popup {
+//  display: none;
+//  position: fixed;
+//  top: 0;
+//  left: 0;
+//  width: 100%;
+//  height: 100%;
+//  z-index: 9;
+//  background-color: rgba(0, 0, 0, 0.5);
+//}
+.btn-call {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 75px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+  background: #00b3ff;
+  z-index: 5;
+  &:hover .fa-phone {
+    animation: call_anim1 .15s linear infinite;
+  }
+  .fa-phone {
+    font-size: 40px;
+    transition: .4s;
+    color: #fff;
+    animation: call_anim 2s linear infinite;
+  }
+}
+
+@keyframes call_anim1 {
+  0%, 100% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(15deg);
+  }
+  75% {
+    transform: rotate(-15deg);
+  }
+}
+@keyframes call_anim {
+  0%, 100% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(30deg);
+  }
+  75% {
+    transform: rotate(-30deg);
+  }
+}
+
+@media (max-height: 350px) {
+  section {
+    padding: 10px 0;
+  }
+  h1, h2, h3  {
+    padding: 10px 0;
+  }
+}
